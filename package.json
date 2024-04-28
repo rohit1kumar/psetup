@@ -1,0 +1,38 @@
+{
+  "name": "psetup",
+  "description": "just a node project setup tool",
+  "version": "0.0.1",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "prepare": "husky || true",
+    "format": "npx prettier --write \"src/**/*.js\"",
+    "lint": "npx eslint --fix \"src/**/*.js\"",
+    "circ-deps": "npx madge . -c"
+  },
+  "author": "Rohit Kumar",
+  "lint-staged": {
+    "src/**/*.js": [
+      "npx madge . -c",
+      "npx eslint --fix",
+      "npx prettier --write"
+    ]
+  },
+  "keywords": [],
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "madge": "^7.0.0",
+    "prettier": "^3.2.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rohit1kumar/psetup.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rohit1kumar/psetup.git/issues"
+  },
+  "homepage": "https://github.com/rohit1kumar/psetup.git#readme"
+}
