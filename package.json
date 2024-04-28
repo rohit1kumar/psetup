@@ -10,6 +10,9 @@
     "lint": "npx eslint --fix \"src/**/*.js\"",
     "circ-deps": "npx madge . -c"
   },
+  "bin": {
+    "psetup": "./bin/index.js"
+  },
   "author": "Rohit Kumar",
   "lint-staged": {
     "src/**/*.js": [
@@ -26,6 +29,11 @@
     "lint-staged": "^15.2.2",
     "madge": "^7.0.0",
     "prettier": "^3.2.5"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "fs-extra": "^11.2.0",
+    "inquirer": "^9.2.20"
   },
   "repository": {
     "type": "git",
